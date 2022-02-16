@@ -1,13 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import React,{ useState } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Loading } from './src/components/common';
+import Auth from "./src/screens/Auth";
+import LoggedIn from "./src/screens/LoggedIn"
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return(
+    <LoggedIn />
+  )
+   
 }
 
 const styles = StyleSheet.create({
@@ -18,3 +20,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
